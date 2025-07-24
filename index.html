@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lotus | Portfolio</title>
+  <link rel="shortcut icon" href="lotusicondark.png" type="image/x-icon">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+    }
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+  </style>
+</head>
+<body class="bg-gray-100 dark:bg-gray-900 text-gray-800 dark:text-white transition-colors duration-300">
+
+  <!-- Navbar -->
+  <header id="navbar" class="fixed top-0 w-full bg-white dark:bg-gray-800 shadow-md p-4 z-50 transition-colors duration-300">
+    <div class="container mx-auto flex justify-between items-center">
+      <div class="text-xl font-bold text-purple-600">Lotus</div>
+
+      <nav class="hidden md:block">
+        <ul class="flex gap-6 text-sm font-medium">
+          <li><a id="navAbout" href="#about" class="hover:text-purple-600">Hakkımda</a></li>
+          <li><a id="navSkills" href="#skills" class="hover:text-purple-600">Yeteneklerim</a></li>
+          <li><a id="navProjects" href="#projects" class="hover:text-purple-600">Projeler</a></li>
+          <li><a id="navContact" href="#contact" class="hover:text-purple-600">İletişim</a></li>
+        </ul>
+      </nav>
+
+      <div class="space-x-2">
+        <button id="themeToggle" class="px-3 py-1 bg-purple-500 text-white rounded hover:bg-purple-600 transition">🌓</button>
+        <button id="langToggle" class="px-3 py-1 bg-gray-300 dark:bg-gray-700 rounded hover:bg-gray-400 dark:hover:bg-gray-600 transition">🇬🇧</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero / Başlık (typewriter burada) -->
+  <section id="hero" class="min-h-screen flex flex-col justify-center items-center text-center px-4">
+    <h1 id="typewriter" class="text-4xl md:text-5xl font-bold mt-28"></h1>
+    <p id="heroSubtitle" class="mt-6 text-lg max-w-2xl text-gray-600 dark:text-gray-300">
+      <!-- Dil değişiminde güncellenmesini istersen burayı da JS'de ekleyebiliriz -->
+    </p>
+    <a href="#about" class="mt-10 inline-block bg-purple-600 text-white px-6 py-3 rounded hover:bg-purple-700 transition">
+      ↓
+    </a>
+  </section>
+
+  <!-- Hakkımda -->
+  <section id="about" class="py-20 bg-purple-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4 text-center">
+      <h2 id="aboutTitle" class="text-3xl font-bold mb-6">Hakkımda</h2>
+      <p id="aboutText" class="text-lg max-w-2xl mx-auto">
+        Yazılıma tutkuyla bağlı bir geliştiriciyim. HTML, CSS, JavaScript ve Tailwind öğreniyorum. 🚀
+      </p>
+    </div>
+  </section>
+  <!--yetenekler-->
+  <section id="skills" class="py-20 bg-gray-100 dark:bg-gray-800">
+    <div class="text-center px-4 max-w-5xl mx-auto">
+      <h2 id="skillsTitle" class="text-3xl font-bold mb-8" data-aos="fade-down">Yeteneklerim</h2>
+      <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8" data-aos="zoom-in" data-aos-delay="300">
+        <div class="flex flex-col items-center space-y-2 hover:scale-110 transition-transform duration-300 cursor-default">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="h-16" alt="HTML5" />
+          <span>HTML5</span>
+        </div>
+        <div class="flex flex-col items-center space-y-2 hover:scale-110 transition-transform duration-300 cursor-default">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="h-16" alt="CSS3" />
+          <span>CSS3</span>
+        </div>
+        <div class="flex flex-col items-center space-y-2 hover:scale-110 transition-transform duration-300 cursor-default">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="h-16" alt="JavaScript" />
+          <span>JavaScript</span>
+        </div>
+        <div class="flex flex-col items-center space-y-2 hover:scale-110 transition-transform duration-300 cursor-default">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" class="h-16" alt="Tailwind CSS" />
+          <span>Tailwind CSS</span>
+        </div>
+        <div class="flex flex-col items-center space-y-2 hover:scale-110 transition-transform duration-300 cursor-default">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" class="h-16" alt="Python" />
+          <span>Python</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Projeler -->
+  <section id="projects" class="py-20">
+    <div class="container mx-auto px-4 text-center">
+      <h2 id="projectsTitle" class="text-3xl font-bold mb-8">Projelerim</h2>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-8 max-w-4xl mx-auto">
+        <div class="bg-white p-6 rounded shadow-md text-left dark:bg-gray-700 dark:text-gray-200">
+          <h3 id="project1Title" class="text-xl font-semibold mb-2">To-Do App</h3>
+          <p id="project1Desc" class="text-gray-600 dark:text-gray-300">
+            Yapılacaklar listesi uygulaması. HTML, JS ve Tailwind kullanıldı.
+          </p>
+        </div>
+
+        <div class="bg-white p-6 rounded shadow-md text-left dark:bg-gray-700 dark:text-gray-200">
+          <h3 id="project2Title" class="text-xl font-semibold mb-2">Hava Durumu Sitesi</h3>
+          <p id="project2Desc" class="text-gray-600 dark:text-gray-300">
+            API ile hava durumu verisi çeken mini proje.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- İletişim -->
+  <section id="contact" class="py-20 bg-purple-50 dark:bg-gray-800">
+    <div class="container mx-auto px-4 text-center">
+      <h2 id="contactTitle" class="text-3xl font-bold mb-4">İletişim</h2>
+      <p id="contactDesc" class="mb-4">Bana ulaşmak istersen:</p>
+      <p>
+        📧 <a id="contactEmail" href="mailto:lotus@example.com" class="text-purple-600 hover:underline dark:text-purple-300">yagmurkarasoy@gamil.com</a><br />
+        💻 <a id="contactGithub" href="https://github.com/Y-Lotus" target="_blank" class="text-purple-600 hover:underline dark:text-purple-300">GitHub Profilim</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-6 text-center text-sm text-gray-500 dark:bg-gray-800 dark:text-gray-400">
+    <span id="footerText">© 2025 Lotus. Tüm hakları saklıdır.</span>
+  </footer>
+
+  <!-- Yukarı Çık Butonu -->
+  <button id="scrollTop" class="hidden fixed bottom-4 right-4 bg-purple-600 text-white p-3 rounded-full shadow-lg hover:bg-purple-700 transition z-50">
+    ⬆
+  </button>
+
+  <!-- JavaScript -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // ---------- Typewriter ----------
+      const target = document.getElementById("typewriter");
+      const typeTexts = {
+        tr: ["Merhaba, ben Lotus 🌸"],
+        en: ["Hi, I'm Lotus 🌸"]
+      };
+  
+      let currentLang = "tr";
+      let textIndex = 0;
+      let charIndex = 0;
+      let typingTimer;
+  
+      function typeEffect() {
+        const text = typeTexts[currentLang][textIndex];
+        if (charIndex <= text.length) {
+          target.textContent = text.substring(0, charIndex);
+          charIndex++;
+          typingTimer = setTimeout(typeEffect, 80);
+        }
+      }
+  
+      function restartTypewriter() {
+        clearTimeout(typingTimer);
+        charIndex = 0;
+        typeEffect();
+      }
+  
+      typeEffect(); // İlk çağrı
+  
+      // ---------- Tema (Dark Mode) ----------
+      const themeToggle = document.getElementById("themeToggle");
+      themeToggle.addEventListener("click", () => {
+        document.documentElement.classList.toggle("dark");
+      });
+  
+      // ---------- Navbar Scroll Rengi ----------
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("bg-purple-100", "dark:bg-gray-700");
+        } else {
+          navbar.classList.remove("bg-purple-100", "dark:bg-gray-700");
+        }
+      });
+  
+      // ---------- Yukarı Çık Butonu ----------
+      const scrollTopBtn = document.getElementById("scrollTop");
+      window.addEventListener("scroll", () => {
+        scrollTopBtn.classList.toggle("hidden", window.scrollY <= 100);
+      });
+  
+      scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      });
+  
+      // ---------- Dil Değiştirici ----------
+      const langBtn = document.getElementById("langToggle");
+  
+      langBtn.addEventListener("click", () => {
+        if (currentLang === "tr") {
+          // EN
+          document.documentElement.setAttribute("lang", "en");
+          currentLang = "en";
+          restartTypewriter();
+  
+          document.getElementById("navAbout").textContent = "About";
+          document.getElementById("navSkills").textContent = "Skills";
+          document.getElementById("navProjects").textContent = "Projects";
+          document.getElementById("navContact").textContent = "Contact";
+          
+  
+          document.getElementById("aboutTitle").textContent = "About";
+          document.getElementById("aboutText").textContent =
+            "I’m a passionate developer learning HTML, CSS, JavaScript and Tailwind. 🚀";
+  
+          document.getElementById("projectsTitle").textContent = "My Projects";
+          document.getElementById("project1Title").textContent = "To-Do App";
+          document.getElementById("project1Desc").textContent =
+            "A to-do list application using HTML, JS and Tailwind.";
+          document.getElementById("project2Title").textContent = "Weather App";
+          document.getElementById("project2Desc").textContent =
+            "A mini project that fetches weather data via an API.";
+  
+          document.getElementById("contactTitle").textContent = "Contact";
+          document.getElementById("contactDesc").textContent = "You can reach me at:";
+          document.getElementById("contactGithub").textContent = "My GitHub Profile";
+          document.getElementById("footerText").textContent = "© 2025 Lotus. All rights reserved.";
+  
+          langBtn.textContent = "🇹🇷";
+        } else {
+          // TR
+          document.documentElement.setAttribute("lang", "tr");
+          currentLang = "tr";
+          restartTypewriter();
+  
+          document.getElementById("navAbout").textContent = "Hakkımda";
+          document.getElementById("navSkills").textContent = "Yeteneklerim";
+          document.getElementById("navProjects").textContent = "Projeler";
+          document.getElementById("navContact").textContent = "İletişim";
+  
+          document.getElementById("aboutTitle").textContent = "Hakkımda";
+          document.getElementById("aboutText").textContent =
+            "Yazılıma tutkuyla bağlı bir geliştiriciyim. HTML, CSS, JavaScript ve Tailwind öğreniyorum. 🚀";
+  
+          document.getElementById("projectsTitle").textContent = "Projelerim";
+          document.getElementById("project1Title").textContent = "To-Do App";
+          document.getElementById("project1Desc").textContent =
+            "Yapılacaklar listesi uygulaması. HTML, JS ve Tailwind kullanıldı.";
+          document.getElementById("project2Title").textContent = "Hava Durumu Sitesi";
+          document.getElementById("project2Desc").textContent =
+            "API ile hava durumu verisi çeken mini proje.";
+  
+          document.getElementById("contactTitle").textContent = "İletişim";
+          document.getElementById("contactDesc").textContent = "Bana ulaşmak istersen:";
+          document.getElementById("contactGithub").textContent = "GitHub Profilim";
+          document.getElementById("footerText").textContent = "© 2025 Lotus. Tüm hakları saklıdır.";
+  
+          langBtn.textContent = "🇬🇧";
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>
