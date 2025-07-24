@@ -8,6 +8,5 @@ Bu proje, Lotus'un kişisel portföyü için oluşturulmuştur. / This project i
 - Responsive navbar  
 - Dark mode desteği / Dark mode support  
 - Dil değişimi (Türkçe / İngilizce) / Language toggle (Turkish / English)  
-
-## Kurulum / Installation
+## will be updated
 
